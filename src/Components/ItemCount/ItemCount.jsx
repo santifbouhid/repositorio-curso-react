@@ -1,8 +1,9 @@
 import * as React from 'react';
 import { useState } from 'react'
-import Grid from '@mui/material/Grid';
+import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
+import s from './itemCount.module.css';
 
 export default function ItemCount({stock}) {
     
@@ -27,33 +28,24 @@ export default function ItemCount({stock}) {
     }
 
     return (
-        <Grid container spacing={2} 
-        direction="row"
-        justifyContent="space-around"
-        alignItems="center"
-        sx={{width: 300}}>
-            <Grid item xs={4}>
-                <Button onClick={quitarItem} variant="text" size="small">
+        <Box className={s.itemCount}>
+            <Box className={s.contador}>
+                <Button onClick={quitarItem} variant="text" >
                     -
                 </Button>
-            </Grid>
-            <Grid item xs={4}>
-                <Typography variant="body1" align='center'>
+                <Typography variant="body1" component="p" className={s.numeroContador}>
                     {count}
                 </Typography>
-            </Grid>
-            <Grid item xs={4}>
-                <Button onClick={agregarItem} variant="text" size="small">
+                <Button onClick={agregarItem} variant="text" >
                     +
                 </Button>
-            </Grid>
-            <Grid item xs={12}>
-                <Button onClick={mensaje} variant="outlined" size="small">
+            </Box>
+            <Box className={s.contenedorAgregarAlCarrito}>
+                <Button onClick={mensaje} variant="outlined"  className={s.agregarAlCarrito}>
                     Añadir al carrito
                 </Button>
-            </Grid>
-        </Grid>
-        
+            </Box>
+        </Box>
     );
 }
 

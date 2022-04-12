@@ -7,37 +7,38 @@ import Typography from '@mui/material/Typography';
 import Menu from '@mui/material/Menu';
 import MenuIcon from '@mui/icons-material/Menu';
 import Container from '@mui/material/Container';
-import Avatar from '@mui/material/Avatar';
+//import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
-import Tooltip from '@mui/material/Tooltip';
+//import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import CartWidget from './CartWidget';
+import s from './navBar.module.css';
 
 const pages = ['Productos', 'Sobre mí', 'Blog'];
-const settings = ['Perfil', 'Cerrar sesión'];
+//const settings = ['Perfil', 'Cerrar sesión'];
 
 export default function NavBar() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
-  const [anchorElUser, setAnchorElUser] = React.useState(null);
+  //const [anchorElUser, setAnchorElUser] = React.useState(null);
 
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
   };
-  const handleOpenUserMenu = (event) => {
-    setAnchorElUser(event.currentTarget);
-  };
+  // const handleOpenUserMenu = (event) => {
+  //   setAnchorElUser(event.currentTarget);
+  // };
 
   const handleCloseNavMenu = () => {
     setAnchorElNav(null);
   };
 
-  const handleCloseUserMenu = () => {
-    setAnchorElUser(null);
-  };
+  // const handleCloseUserMenu = () => {
+  //   setAnchorElUser(null);
+  // };
 
   return (
-    <AppBar position="static">
-      <Container maxWidth="xl">
+    <AppBar position="static" className={s.navBar}>
+      <Container maxWidth="xl" className={s.colorNavBar}>
         <Toolbar disableGutters>
           <Typography
             variant="h6"
@@ -79,8 +80,8 @@ export default function NavBar() {
               }}
             >
               {pages.map((page) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">{page}</Typography>
+                <MenuItem key={page} onClick={handleCloseNavMenu} >
+                  <Typography textAlign="center" >{page}</Typography>
                 </MenuItem>
               ))}
             </Menu>

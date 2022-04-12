@@ -1,0 +1,23 @@
+.itemDetail{
+    display: flex;
+    /* padding: 0.5rem; */
+}
+
+.imagen{
+    border-top-left-radius: 1%;
+    border-bottom-left-radius: 1%;
+}
+
+.contenedorinfo{
+    margin-left: 3rem;
+    margin-top: 2rem;
+}
+
+.itemDescripcion{
+    margin-top: 1rem;
+}
+
+.itemCount{
+    margin-top: 3rem;
+    width: 15rem;
+}
