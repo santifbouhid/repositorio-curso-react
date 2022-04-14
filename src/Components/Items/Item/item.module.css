@@ -1,0 +1,22 @@
+.cardItem{
+    margin: 1rem;
+    max-width: 15rem;
+    width: 100%;
+}
+
+.cardImagen{
+    height: 15rem;
+}
+
+.contenedorContador{
+    margin-top: 0.5rem;
+}
+
+.link{
+    text-decoration: none;
+}
+
+.verDetalle{
+    margin-top: 1rem;
+    margin-bottom: -0.5rem;
+}

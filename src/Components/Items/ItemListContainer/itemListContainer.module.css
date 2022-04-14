@@ -1,0 +1,5 @@
+.contenedorItemList{
+    display: flex;
+    flex-wrap: wrap;
+}
+

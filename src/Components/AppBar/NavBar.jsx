@@ -4,6 +4,7 @@ import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
 import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
+import Link from '@mui/material/Link';
 import Menu from '@mui/material/Menu';
 import MenuIcon from '@mui/icons-material/Menu';
 import Container from '@mui/material/Container';
@@ -14,12 +15,12 @@ import MenuItem from '@mui/material/MenuItem';
 import CartWidget from './CartWidget';
 import s from './navBar.module.css';
 
-const pages = ['Productos', 'Sobre mí', 'Blog'];
-//const settings = ['Perfil', 'Cerrar sesión'];
+const pages = [{nombre:'Remeras', link:'/categoria/remeras'}, {nombre:'Pantalones', link:'/categoria/pantalones'}, {nombre:'Calzados', link:'/categoria/calzados'}];
+// const settings = ['Perfil', 'Cerrar sesión'];
 
 export default function NavBar() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
-  //const [anchorElUser, setAnchorElUser] = React.useState(null);
+  // const [anchorElUser, setAnchorElUser] = React.useState(null);
 
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
@@ -51,6 +52,7 @@ export default function NavBar() {
           </Typography>
 
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
+            {/* MENU HAMBURGUESA */}
             <IconButton
               size="large"
               aria-label="account of current user"
@@ -80,8 +82,8 @@ export default function NavBar() {
               }}
             >
               {pages.map((page) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu} >
-                  <Typography textAlign="center" >{page}</Typography>
+                <MenuItem key={page.nombre} onClick={handleCloseNavMenu} >
+                   <Link href={page.link} className={s.linksMenuHamburguesa}> <Typography textAlign="center" >{page.nombre}</Typography> </Link>
                 </MenuItem>
               ))}
             </Menu>
@@ -98,11 +100,11 @@ export default function NavBar() {
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
             {pages.map((page) => (
               <Button
-                key={page}
+                key={page.nombre}
                 onClick={handleCloseNavMenu}
                 sx={{ my: 2, color: 'white', display: 'block' }}
               >
-                {page}
+                <Link href={page.link} className={s.links} >{page.nombre}</Link>
               </Button>
             ))}
           </Box>

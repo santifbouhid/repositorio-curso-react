@@ -7,3 +7,12 @@
     background-color:darkviolet;
 }
 
+.links{
+    text-decoration: none;
+    color: white;
+}
+
+.linksMenuHamburguesa{
+    text-decoration: none;
+    color: black;
+}

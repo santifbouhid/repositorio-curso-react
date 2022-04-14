@@ -1,27 +1,37 @@
 import React from 'react'
 import Card from '@mui/material/Card';
+import Box from '@mui/material/Box';
+import { Link } from 'react-router-dom';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import ItemCount from '../../ItemCount/ItemCount'
+import s from './item.module.css'
 
-export default function Item({id, nombre, precio, imagen}) {
+export default function Item({productos}) {
   return (
-    <Card key={id} sx={{ maxWidth: 345 }}>
+    <Card key={productos.id} className={s.cardItem} elevation={3}>
         <CardMedia
+            className={s.cardImagen}
             component="img"
-            height="140"
-            image={imagen}
-            alt={`Imagen de ${nombre}`}
+            image={productos.imagen}
+            alt={`Imagen de ${productos.nombre}`}
         />
         <CardContent>
             <Typography gutterBottom variant="h5" component="div">
-                {nombre}
+                {productos.nombre}
             </Typography>
-            <Typography variant="body2" color="text.secondary">
-                ${precio}
+            <Typography variant="h6" color="text.secondary">
+                {productos.precio}
             </Typography>
-            <ItemCount stock={5}/>
+            <Box className={s.contenedorContador}>
+                <ItemCount stock={productos.stock} className={s.contador}/>
+            </Box>
+            <Link to={`/producto/${productos.id}`} className={s.link}>
+                <Typography variant="body1" color="text.secondary" className={s.verDetalle}>
+                    Ver detalle
+                </Typography>
+            </Link>
         </CardContent>
     </Card>
   )

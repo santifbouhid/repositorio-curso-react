@@ -1,33 +1,33 @@
 import './App.css';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import NavBar from './Components/AppBar/NavBar';
-import ItemListContainer from './Components/ItemListContainer';
+import ItemListContainer from './Components/Items/ItemListContainer/ItemListContainer';
 import { Container } from '@mui/material';
 import ItemDetailContainer from './Components/ItemDetail/ItemDetailContainer';
-import ItemCount from './Components/ItemCount/ItemCount';
+
 
 
 
 
 export default function App() {
   return (
-    <>
-    <NavBar/>
-    <Container>
+    <BrowserRouter>
+      <NavBar/>
 
-      <ItemDetailContainer/>
 
-      
+      <Container>
+        <Routes>
+          <Route path="/" element={<ItemListContainer/>} />
+          <Route path="/categoria/:categoriaId" element={<ItemListContainer/>} />
+          <Route path="/producto/:id" element={<ItemDetailContainer/>} />
+          
 
-    </Container>
+        </Routes>
+        
+      </Container> 
     
-    </>
-    
-    
+      </BrowserRouter>
 
-
-
-      
   );
 }
 
