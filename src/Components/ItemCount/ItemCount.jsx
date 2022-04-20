@@ -5,7 +5,7 @@ import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import s from './itemCount.module.css';
 
-export default function ItemCount({stock}) {
+export default function ItemCount({stock, onAdd}) {
     
     const [count, setCount] = useState(0);
     
@@ -27,6 +27,11 @@ export default function ItemCount({stock}) {
         } 
     }
 
+    const handleClick = () => {
+        onAdd(count);
+        mensaje();
+    }
+
     return (
         <Box className={s.itemCount}>
             <Box className={s.contador}>
@@ -41,7 +46,7 @@ export default function ItemCount({stock}) {
                 </Button>
             </Box>
             <Box className={s.contenedorAgregarAlCarrito}>
-                <Button onClick={mensaje} variant="outlined"  className={s.agregarAlCarrito}>
+                <Button onClick={handleClick} variant="outlined"  className={s.agregarAlCarrito}>
                     Añadir al carrito
                 </Button>
             </Box>
