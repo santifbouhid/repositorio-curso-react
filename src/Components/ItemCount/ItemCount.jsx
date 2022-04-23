@@ -1,13 +1,16 @@
 import * as React from 'react';
-import { useState } from 'react'
+import { useState, useContext } from 'react'
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import s from './itemCount.module.css';
+import { CartProvider } from '../../Context/CartContext';
 
-export default function ItemCount({stock, onAdd}) {
+export default function ItemCount({stock, onAdd, producto}) {
     
     const [count, setCount] = useState(0);
+
+    const {addItem, cart} = useContext(CartProvider);
     
     const agregarItem = () => {
         if (count < stock) {
@@ -28,9 +31,16 @@ export default function ItemCount({stock, onAdd}) {
     }
 
     const handleClick = () => {
+        producto.cantidad = count;
+        addItem(producto, count);
         onAdd(count);
-        mensaje();
+        console.log(count);
+        console.log(cart);
+        
+     
+        //mensaje();
     }
+    
 
     return (
         <Box className={s.itemCount}>
