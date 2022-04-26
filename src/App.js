@@ -6,6 +6,7 @@ import { Container } from '@mui/material';
 import ItemDetailContainer from './Components/ItemDetail/ItemDetailContainer';
 import CartContainer from './Components/Cart/CartContainer';
 import CartContext from './Context/CartContext';
+import Loading from './Components/Loading/Loading';
 
 
 export default function App() {

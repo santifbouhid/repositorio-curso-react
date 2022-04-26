@@ -1,0 +1,48 @@
+.titulos{
+    display: grid;
+    grid-template-columns: 3fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1;
+    align-items: center;
+}
+.container_items{
+    margin-top: 1rem;
+}
+.titulos_productos{
+    grid-column: 3fr;
+    display: flex;
+    align-items: center;
+}
+.imagen{
+    width: 5rem;
+    height: 6rem;
+    margin-right: 10%;
+}
+.titulos_precio_unidad{
+    grid-column: 1fr;
+}
+.titulos_cantidad{
+    grid-column: 1fr;
+}
+.titulos_precio{
+    grid-column: 1fr;
+}
+
+
+.footer_cart{
+    margin-top: 3rem;
+}
+
+.limpiar_carrito{
+    grid-column: 3fr;
+    width: 50%;
+}
+.espacio_total{
+    grid-column: 1fr;
+
+}
+.titulo_total{
+    grid-column: 1fr;
+}
+.precio_total{
+    grid-column: 1fr;
+}
