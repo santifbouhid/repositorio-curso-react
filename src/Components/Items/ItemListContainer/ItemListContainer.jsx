@@ -6,6 +6,13 @@ import Box from "@mui/material/Box";
 import { useParams } from "react-router-dom";
 import s from "./itemListContainer.module.css";
 import Loading from "../../Loading/Loading";
+import {
+  collection,
+  getDocs,
+  getFirestore,
+  query,
+  where,
+} from "firebase/firestore";
 
 export default function ItemListContainer() {
   const [prod, setProd] = useState([]);
@@ -14,15 +21,33 @@ export default function ItemListContainer() {
 
   const [loading, setLoading] = useState(true);
 
-  const productosFiltrados = productos.filter(
-    (producto) => producto.categoria === categoriaId
-  );
-
   useEffect(() => {
-    customFetch(3000, categoriaId ? productosFiltrados : productos)
-      .then((resp) => setProd(resp))
-      .catch((err) => console.log(err))
-      .finally(() => setLoading(false));
+    const db = getFirestore();
+
+    const arrayRef = collection(db, "productos");
+
+    const productosFiltrados = categoriaId
+      ? query(
+          collection(db, "productos"),
+          where("categoria", "==", categoriaId)
+        )
+      : [];
+
+    if (categoriaId) {
+      getDocs(productosFiltrados)
+        .then((res) => {
+          setProd(res.docs.map((item) => ({ id: item.id, ...item.data() })));
+        })
+        .catch((err) => console.log(err))
+        .finally(() => setLoading(false));
+    } else {
+      getDocs(arrayRef)
+        .then((res) => {
+          setProd(res.docs.map((item) => ({ id: item.id, ...item.data() })));
+        })
+        .catch((err) => console.log(err))
+        .finally(() => setLoading(false));
+    }
   }, [categoriaId]);
 
   if (loading) {

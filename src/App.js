@@ -7,6 +7,8 @@ import ItemDetailContainer from './Components/ItemDetail/ItemDetailContainer';
 import CartContainer from './Components/Cart/CartContainer';
 import CartContext from './Context/CartContext';
 import Loading from './Components/Loading/Loading';
+import PruebaFB from './Components/PruebaFB';
+import PruebaFBArray from './Components/PruebaFBArray';
 
 
 export default function App() {
@@ -20,6 +22,8 @@ export default function App() {
             <Route path="/categoria/:categoriaId" element={ <ItemListContainer/> } />
             <Route path="/producto/:id" element={ <ItemDetailContainer/> } />
             <Route path="/cart" element={ <CartContainer/> } />
+            <Route path="/testfirebase" element={ <PruebaFB/> } />
+            <Route path="/testfirebase/array" element={ <PruebaFBArray/> } />
           </Routes>
         </Container> 
       </BrowserRouter>

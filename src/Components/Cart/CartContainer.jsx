@@ -15,9 +15,13 @@ export default function CartContainer() {
         <div className={s.titulos_cantidad}>Cantidad</div>
         <div className={s.titulos_precio_total}>Total</div>
       </div>
-      {cart.map((p) => (
-        <Cart producto={p} />
-      ))}
+
+      {cart.length === 0 ? (
+        <p>No hay productos en el carrito en este momento</p>
+      ) : (
+        cart.map((p) => <Cart producto={p} />)
+      )}
+
       <div className={s.footer_cart}>
         <div className={s.titulos}>
           <button className={s.limpiar_carrito} onClick={() => clearCart()}>
