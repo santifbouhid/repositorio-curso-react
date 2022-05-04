@@ -1,13 +1,6 @@
 import React, { useState, useEffect, useContext } from "react";
 import { CartProvider } from "../../Context/CartContext";
-import {
-  addDoc,
-  collection,
-  getDocs,
-  getFirestore,
-  query,
-  where,
-} from "firebase/firestore";
+import { addDoc, collection, getFirestore } from "firebase/firestore";
 import OrdenDeCompra from "../OrdenDeCompra/OrdenDeCompra";
 
 export default function FormularioCompra() {
@@ -19,9 +12,9 @@ export default function FormularioCompra() {
 
   const { cart, valorTotal } = useContext(CartProvider);
 
-  const { compraFinalizada, setCompraFinalizada } = useState(false);
+  const [compraFinalizada, setCompraFinalizada] = useState(false);
 
-  const { ordenId, setOrdenId } = useState("");
+  const [ordenId, setOrdenId] = useState("");
 
   //   const [loading, setLoading] = useState(false);
 
@@ -44,9 +37,7 @@ export default function FormularioCompra() {
       .catch(() => alert("error"));
   }
 
-  if (compraFinalizada === true) {
-    return <OrdenDeCompra ordenId={ordenId} />;
-  } else {
+  if (compraFinalizada === false) {
     return (
       <>
         <p>Nombre:</p>
@@ -80,5 +71,7 @@ export default function FormularioCompra() {
         <button onClick={terminarCompra}>Finalizar compra</button>
       </>
     );
+  } else {
+    return <OrdenDeCompra ordenId={ordenId} />;
   }
 }
