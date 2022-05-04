@@ -1,5 +1,5 @@
 import * as React from "react";
-import { useState, useContext } from "react";
+import { useState, useContext, useEffect } from "react";
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
@@ -30,10 +30,12 @@ export default function ItemCount({ stock, onAdd, producto }) {
   };
 
   const handleClick = () => {
-    producto.cantidad = count;
     addItem(producto, count);
     onAdd(count);
   };
+  useEffect(() => {
+    console.log(cart, cart.cantidad, count, producto);
+  }, [cart]);
 
   return (
     <Box className={s.itemCount}>

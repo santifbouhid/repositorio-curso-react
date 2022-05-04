@@ -1,19 +1,23 @@
-import React, { createContext, useState } from "react";
+import React, { createContext, useEffect, useState } from "react";
 
 export const CartProvider = createContext();
 
 export default function CartContext({ children }) {
   const [cart, setCart] = useState([]);
 
+  const [valorTotal, setValorTotal] = useState(0);
+
   const addItem = (item, count) => {
     const indexProd = cart.findIndex((prod) => prod.id === item.id);
+    console.log(indexProd);
     if (indexProd !== -1) {
       const newCart = [...cart];
-      newCart.cantidad = newCart.cantidad + count;
+      newCart.map((i) =>
+        i.id === item.id ? (i.cantidad = i.cantidad + count) : null
+      );
       setCart(newCart);
     } else {
-      // const newItem = {...item, cantidad: Number(count)}
-      setCart([...cart, item]);
+      setCart([...cart, { ...item, cantidad: count }]);
     }
   };
 
@@ -25,9 +29,23 @@ export default function CartContext({ children }) {
     setCart([]);
   };
 
+  useEffect(() => {
+    console.log(cart);
+  }, [cart]);
+
+  useEffect(() => {
+    if (cart !== []) {
+      const valor = cart.reduce(
+        (total, prod) => total + prod.cantidad * prod.precio,
+        0
+      );
+      setValorTotal(valor);
+    }
+  }, [cart]);
+
   return (
     <CartProvider.Provider
-      value={{ cart, setCart, addItem, removeItem, clearCart }}
+      value={{ cart, setCart, addItem, removeItem, clearCart, valorTotal }}
     >
       {children}
     </CartProvider.Provider>

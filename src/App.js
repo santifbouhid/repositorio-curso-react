@@ -9,6 +9,7 @@ import CartContext from './Context/CartContext';
 import Loading from './Components/Loading/Loading';
 import PruebaFB from './Components/PruebaFB';
 import PruebaFBArray from './Components/PruebaFBArray';
+import TestFormularioCompra from './Components/TestFormularioCompra';
 
 
 export default function App() {
@@ -24,6 +25,7 @@ export default function App() {
             <Route path="/cart" element={ <CartContainer/> } />
             <Route path="/testfirebase" element={ <PruebaFB/> } />
             <Route path="/testfirebase/array" element={ <PruebaFBArray/> } />
+            <Route path="/testformulariocompra" element={ <TestFormularioCompra/>} />
           </Routes>
         </Container> 
       </BrowserRouter>

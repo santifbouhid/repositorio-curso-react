@@ -1,10 +1,14 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import { CartProvider } from "../../Context/CartContext";
 import s from "./cart.module.css";
 import DeleteIcon from "@mui/icons-material/Delete";
 
 function Cart({ producto }) {
   const { removeItem } = useContext(CartProvider);
+
+  useEffect(() => {
+    console.log(producto);
+  }, [producto]);
 
   return (
     <div className={s.container_items}>

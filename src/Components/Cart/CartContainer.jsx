@@ -1,10 +1,11 @@
 import React, { useContext } from "react";
 import { CartProvider } from "../../Context/CartContext";
+import FormularioCompra from "../FormularioCompra/FormularioCompra";
 import Cart from "./Cart";
 import s from "./cart.module.css";
 
 export default function CartContainer() {
-  const { cart, clearCart } = useContext(CartProvider);
+  const { cart, clearCart, valorTotal } = useContext(CartProvider);
 
   return (
     <>
@@ -29,10 +30,11 @@ export default function CartContainer() {
           </button>
           <div className={s.espacio_total}></div>
           <div className={s.titulo_total}>Total:</div>
-          <div className={s.precio_total}>$</div>
-          <button>Comprar</button>
+          <div className={s.precio_total}>{valorTotal}</div>
+          {/* <button>Comprar</button> */}
         </div>
       </div>
+      {cart.length !== 0 ? <FormularioCompra /> : null}
     </>
   );
 }
