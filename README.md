@@ -1,70 +1,31 @@
-# Getting Started with Create React App
+# Santi Shop
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Entrega final del curso de React JS en Coderhouse
 
-## Available Scripts
+## ¿Cuál fue la motivación para realizar éste proyecto?
 
-In the project directory, you can run:
+La idea de éste fue implementar los conocimientos adquiridos de React JS a medida que avanzaba el curso.
 
-### `npm start`
+## ¿De qué se trata el proyecto?
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+El proyecto consiste en una simulación de una tienda virtual de ropa.
+En el NavBar de la web encontramos el nombre de la tienda, las categorías de los productos, y el carrito donde aparecerá la cantidad de productos que fueron agregados.
+En su página principal, aparecen los productos con una breve descripción y un botón que te llevará a ver el producto más detalladamente y donde podrás añadir el producto al carrito.
+En la pestaña del carrito, podremos ver los productos que fueron agregados anteriormente en caso de haberlos adregado y, sino, veremos el carrito vacío. Además vamos a ver un formulario donde pondremos nuestros datos para poder finalizar la compra y, al finalizarla, aparecerá el código de la compra.
+La compra se guardará en la base de datos creada en Firebase.
+Y por último, aparece el footer donde encontramos el nombre de la tienda y los links a sus redes sociales.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## ¿Con qué lenguajes está realizado el proyecto?
 
-### `npm test`
+El proyecto está realizado principalmente con React Js, CSS y HTML.
+Y para la base de datos utilicé Firebase.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### ¿Se utilizaron librerías?
 
-### `npm run build`
+Sí, en éste proyecto utilicé Material UI, principalmente para el NavBar y para agregarle estilo a la web. 
+También utilicé Chakra Ui, para agregar el spinner que aparece en la web cada vez que algún componente carga.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## ¿Cómo corro el proyecto?
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Simplemente poniendo el comando "npm start"
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
