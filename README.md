@@ -4,7 +4,7 @@ Entrega final del curso de React JS en Coderhouse
 
 ## ¿Cuál fue la motivación para realizar éste proyecto?
 
-La idea de éste fue implementar los conocimientos adquiridos de React JS a medida que avanzaba el curso.
+La idea del proyecto fue implementar los conocimientos adquiridos de React JS a medida que avanzaba el curso.
 
 ## ¿De qué se trata el proyecto?
 
