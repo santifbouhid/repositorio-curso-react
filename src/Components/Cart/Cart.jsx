@@ -17,10 +17,10 @@ function Cart({ producto }) {
           <img className={s.imagen} src={producto.imagen} alt="" />
           <div>{producto.nombre}</div>
         </div>
-        <div className={s.titulos_precio_unidad}>{producto.precio}</div>
+        <div className={s.titulos_precio_unidad}>${producto.precio}</div>
         <div className={s.titulos_cantidad}>{producto.cantidad}</div>
         <div className={s.titulos_precio_total}>
-          {producto.cantidad * producto.precio}
+          ${producto.cantidad * producto.precio.toFixed(2)}
         </div>
         <div className={s.borrar}>
           <DeleteIcon onClick={() => removeItem(producto.id)} />

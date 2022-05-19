@@ -20,21 +20,25 @@ export default function CartContainer() {
       {cart.length === 0 ? (
         <p>No hay productos en el carrito en este momento</p>
       ) : (
-        cart.map((p) => <Cart producto={p} />)
+        cart.map((p) => <Cart key={p.id} producto={p} />)
       )}
 
       <div className={s.footer_cart}>
         <div className={s.titulos}>
-          <button className={s.limpiar_carrito} onClick={() => clearCart()}>
-            Limpiar Carrito
-          </button>
+          {cart.length > 0 ? (
+            <button className={s.limpiar_carrito} onClick={() => clearCart()}>
+              Limpiar Carrito
+            </button>
+          ) : (
+            <div></div>
+          )}
           <div className={s.espacio_total}></div>
           <div className={s.titulo_total}>Total:</div>
-          <div className={s.precio_total}>{valorTotal}</div>
+          <div className={s.precio_total}>${valorTotal.toFixed(2)}</div>
           {/* <button>Comprar</button> */}
         </div>
       </div>
-      {cart.length !== 0 ? <FormularioCompra /> : null}
+      {cart.length > 0 ? <FormularioCompra /> : null}
     </>
   );
 }

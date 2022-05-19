@@ -10,7 +10,7 @@ import s from "./item.module.css";
 
 export default function Item({ productos }) {
   return (
-    <Card key={productos.id} className={s.cardItem} elevation={3}>
+    <Card className={s.cardItem} elevation={3}>
       <CardMedia
         className={s.cardImagen}
         component="img"

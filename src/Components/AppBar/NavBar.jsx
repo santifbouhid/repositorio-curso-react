@@ -42,7 +42,11 @@ export default function NavBar() {
   // };
 
   return (
-    <AppBar position="static" className={s.navBar}>
+    <AppBar
+      position="static"
+      className={s.navBar}
+      sx={{ background: "darkviolet" }}
+    >
       <Container maxWidth="xl" className={s.colorNavBar}>
         <Toolbar disableGutters>
           <Typography
