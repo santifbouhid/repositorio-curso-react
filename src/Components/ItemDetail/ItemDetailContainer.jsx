@@ -10,7 +10,6 @@ export default function ItemDetailContainer() {
 
   const { id } = useParams();
 
-  //  const productoSeleccionado = productos.find((p) => p.id === Number(id));
   useEffect(() => {
     const db = getFirestore();
     const arrayRef = collection(db, "productos");

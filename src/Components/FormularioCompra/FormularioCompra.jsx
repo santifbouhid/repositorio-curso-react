@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useContext } from "react";
+import React, { useState, useContext } from "react";
 import { CartProvider } from "../../Context/CartContext";
 import { addDoc, collection, getFirestore } from "firebase/firestore";
 import OrdenDeCompra from "../OrdenDeCompra/OrdenDeCompra";

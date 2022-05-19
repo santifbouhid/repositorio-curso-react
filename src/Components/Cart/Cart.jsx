@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from "react";
+import React, { useContext } from "react";
 import { CartProvider } from "../../Context/CartContext";
 import s from "./cart.module.css";
 import DeleteIcon from "@mui/icons-material/Delete";

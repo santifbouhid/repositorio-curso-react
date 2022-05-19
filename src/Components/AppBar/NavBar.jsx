@@ -8,9 +8,7 @@ import { Link } from "react-router-dom";
 import Menu from "@mui/material/Menu";
 import MenuIcon from "@mui/icons-material/Menu";
 import Container from "@mui/material/Container";
-//import Avatar from '@mui/material/Avatar';
 import Button from "@mui/material/Button";
-//import Tooltip from '@mui/material/Tooltip';
 import MenuItem from "@mui/material/MenuItem";
 import CartWidget from "./CartWidget";
 import s from "./navBar.module.css";
@@ -20,26 +18,17 @@ const pages = [
   { nombre: "Pantalones", link: "/categoria/pantalones" },
   { nombre: "Calzados", link: "/categoria/calzados" },
 ];
-// const settings = ['Perfil', 'Cerrar sesión'];
 
 export default function NavBar() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
-  // const [anchorElUser, setAnchorElUser] = React.useState(null);
 
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
   };
-  // const handleOpenUserMenu = (event) => {
-  //   setAnchorElUser(event.currentTarget);
-  // };
 
   const handleCloseNavMenu = () => {
     setAnchorElNav(null);
   };
-
-  // const handleCloseUserMenu = () => {
-  //   setAnchorElUser(null);
-  // };
 
   return (
     <AppBar

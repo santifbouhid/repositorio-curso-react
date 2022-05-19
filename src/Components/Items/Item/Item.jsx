@@ -1,11 +1,9 @@
 import React from "react";
 import Card from "@mui/material/Card";
-import Box from "@mui/material/Box";
 import { Link } from "react-router-dom";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
-import ItemCount from "../../ItemCount/ItemCount";
 import s from "./item.module.css";
 
 export default function Item({ productos }) {
@@ -24,9 +22,6 @@ export default function Item({ productos }) {
         <Typography variant="h6" color="text.secondary">
           {productos.precio}
         </Typography>
-        {/* <Box className={s.contenedorContador}>
-                    <ItemCount stock={productos.stock} className={s.contador}/>
-                </Box> */}
         <Link to={`/producto/${productos.id}`} className={s.link}>
           <Typography
             variant="body1"

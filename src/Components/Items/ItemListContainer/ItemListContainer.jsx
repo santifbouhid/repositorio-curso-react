@@ -1,6 +1,4 @@
 import React, { useEffect, useState } from "react";
-import customFetch from "../../utils/customFetch";
-import productos from "../../utils/productos";
 import ItemList from "../ItemList/ItemList";
 import Box from "@mui/material/Box";
 import { useParams } from "react-router-dom";

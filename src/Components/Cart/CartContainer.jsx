@@ -35,7 +35,6 @@ export default function CartContainer() {
           <div className={s.espacio_total}></div>
           <div className={s.titulo_total}>Total:</div>
           <div className={s.precio_total}>${valorTotal.toFixed(2)}</div>
-          {/* <button>Comprar</button> */}
         </div>
       </div>
       {cart.length > 0 ? <FormularioCompra /> : null}

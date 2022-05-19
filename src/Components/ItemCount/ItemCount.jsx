@@ -1,5 +1,5 @@
 import * as React from "react";
-import { useState, useContext, useEffect } from "react";
+import { useState, useContext } from "react";
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
@@ -9,7 +9,7 @@ import { CartProvider } from "../../Context/CartContext";
 export default function ItemCount({ stock, onAdd, producto }) {
   const [count, setCount] = useState(0);
 
-  const { addItem, cart } = useContext(CartProvider);
+  const { addItem } = useContext(CartProvider);
 
   const agregarItem = () => {
     if (count < stock) {
@@ -20,12 +20,6 @@ export default function ItemCount({ stock, onAdd, producto }) {
   const quitarItem = () => {
     if (count > 0) {
       setCount(count - 1);
-    }
-  };
-
-  const mensaje = () => {
-    if (count > 0) {
-      alert("El producto se añadió correctamente");
     }
   };
 
