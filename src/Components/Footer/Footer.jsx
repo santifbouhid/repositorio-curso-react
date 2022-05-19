@@ -9,7 +9,7 @@ function Footer() {
   return (
     <div className={s.footer}>
       <Container sx={{ display: "flex" }} className={s.contenedorFooter}>
-        <div className={s.titulo}>Santi Shop</div>
+        <div className={s.titulo}>Sant Shop</div>
         <div className={s.redes}>
           <a href="https://www.instagram.com/" className={s.link}>
             <InstagramIcon fontSize="large" sx={{ color: "white" }} />
