@@ -9,7 +9,6 @@ export default function CartContext({ children }) {
 
   const addItem = (item, count) => {
     const indexProd = cart.findIndex((prod) => prod.id === item.id);
-    console.log(indexProd);
     if (indexProd !== -1) {
       const newCart = [...cart];
       newCart.map((i) =>
@@ -28,10 +27,6 @@ export default function CartContext({ children }) {
   const clearCart = () => {
     setCart([]);
   };
-
-  useEffect(() => {
-    console.log(cart);
-  }, [cart]);
 
   useEffect(() => {
     if (cart !== []) {

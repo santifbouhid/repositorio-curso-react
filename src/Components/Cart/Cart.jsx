@@ -6,10 +6,6 @@ import DeleteIcon from "@mui/icons-material/Delete";
 function Cart({ producto }) {
   const { removeItem } = useContext(CartProvider);
 
-  useEffect(() => {
-    console.log(producto);
-  }, [producto]);
-
   return (
     <div className={s.container_items}>
       <div className={s.titulos}>

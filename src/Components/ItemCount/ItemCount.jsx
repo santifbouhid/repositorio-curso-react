@@ -33,9 +33,6 @@ export default function ItemCount({ stock, onAdd, producto }) {
     addItem(producto, count);
     onAdd(count);
   };
-  useEffect(() => {
-    console.log(cart, cart.cantidad, count, producto);
-  }, [cart]);
 
   return (
     <Box className={s.itemCount}>
