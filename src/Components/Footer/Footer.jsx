@@ -17,7 +17,7 @@ function Footer() {
           <a href="https://www.facebook.com/" className={s.link}>
             <FacebookIcon fontSize="large" sx={{ color: "white" }} />
           </a>
-          <a href="https://www.instagram.com/" className={s.link}>
+          <a href="https://www.twitter.com/" className={s.link}>
             <TwitterIcon fontSize="large" sx={{ color: "white" }} />
           </a>
         </div>
