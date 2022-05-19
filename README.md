@@ -28,9 +28,17 @@ Y para la base de datos se utilizó Firebase.
 
 ### ¿Se utilizaron librerías?
 
+<<<<<<< HEAD
 Sí, en éste proyecto utilicé Material UI, principalmente para el NavBar y para agregarle estilo a la web.
+=======
+Sí, en éste proyecto utilicé Material UI, principalmente para el NavBar y para agregarle estilo a la web. 
+>>>>>>> aadb3ab2c6a42bbe75bb93d0e225e179f1fd7ff0
 También utilicé Chakra Ui, para agregar el spinner que aparece en la web cada vez que algún componente carga.
 
 ## ¿Cómo corro el proyecto?
 
 Simplemente poniendo el comando "npm start"
+<<<<<<< HEAD
+=======
+
+>>>>>>> aadb3ab2c6a42bbe75bb93d0e225e179f1fd7ff0
