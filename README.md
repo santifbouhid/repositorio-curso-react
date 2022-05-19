@@ -23,7 +23,8 @@ Y por último, aparece el footer donde encontramos el nombre de la tienda y los 
 ## ¿Con qué lenguajes está realizado el proyecto?
 
 El proyecto está realizado principalmente con React Js, CSS y HTML.
-Y para la base de datos utilicé Firebase.
+
+Y para la base de datos se utilizó Firebase.
 
 ### ¿Se utilizaron librerías?
 
