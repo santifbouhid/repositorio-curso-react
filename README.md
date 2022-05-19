@@ -9,10 +9,15 @@ La idea del proyecto fue implementar los conocimientos adquiridos de React JS a 
 ## ¿De qué se trata el proyecto?
 
 El proyecto consiste en una simulación de una tienda virtual de ropa.
+
 En el NavBar de la web encontramos el nombre de la tienda, las categorías de los productos, y el carrito donde aparecerá la cantidad de productos que fueron agregados.
+
 En su página principal, aparecen los productos con una breve descripción y un botón que te llevará a ver el producto más detalladamente y donde podrás añadir el producto al carrito.
+
 En la pestaña del carrito, podremos ver los productos que fueron agregados anteriormente en caso de haberlos adregado y, sino, veremos el carrito vacío. Además vamos a ver un formulario donde pondremos nuestros datos para poder finalizar la compra y, al finalizarla, aparecerá el código de la compra.
+
 La compra se guardará en la base de datos creada en Firebase.
+
 Y por último, aparece el footer donde encontramos el nombre de la tienda y los links a sus redes sociales.
 
 ## ¿Con qué lenguajes está realizado el proyecto?
